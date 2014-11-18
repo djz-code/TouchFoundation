@@ -100,7 +100,7 @@ return([self stringWithDateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatte
 
 - (BOOL)isSameCalendarDayAsDate:(NSDate *)inDate
 {
-NSDateComponents *theComponents = [[NSCalendar currentCalendar] components:NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:self toDate:inDate options:0];
+NSDateComponents *theComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitEra | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:self toDate:inDate options:0];
 
 return(theComponents.era == 0 && theComponents.year == 0 && theComponents.month == 0 && theComponents.day == 0);
 }

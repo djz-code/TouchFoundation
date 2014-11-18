@@ -39,7 +39,7 @@
 - (NSDate *)UTCDate
 {
 NSCalendar *theCalendar = [[NSCalendar currentCalendar] copy];
-NSDateComponents *theComponents = [theCalendar components:NSEraCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:self];
+NSDateComponents *theComponents = [theCalendar components:NSCalendarUnitEra | NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:self];
 theCalendar.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
 return([theCalendar dateFromComponents:theComponents]);
 }
